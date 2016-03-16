@@ -17,7 +17,7 @@ describe("Сортировка пузырьком", function() {
       });
   });
 
-describe("Проверка корректности считывания ввода", function() {
+describe("Проверка валидатора входнных данных", function() {
 
     it("isValidInput('23 -6 0 1.67') equal true", function() {
       assert.equal(isValidInput('23 -6 0 1.67'), true);
@@ -34,6 +34,20 @@ describe("Проверка корректности считывания вво�
     it("isValidInput('1 ! 3 34') equal false", function() {
       assert.equal(isValidInput('1 ! 3 34'), false);
     });
+});
+
+describe("Проверка корректности считывания исходного массива чисел", function(){
+
+  it("parseInputArray(' 20, 9, -2.17 ')  equal [ 20, 9, -2.17 ]", function(){
+    assert(equalArray(parseInputArray(' 20, 9, -2.17 '), [ 20, 9, -2.17 ]));
+  });
+  it("parseInputArray(' 20 9 -2.17 ')  equal [ 20, 9, -2.17 ]", function(){
+    assert(equalArray(parseInputArray(' 20, 9, -2.17 '), [ 20, 9, -2.17 ]));
+  });
+  it("parseInputArray(' 20,-2.17,12e5 ')  equal [ 20, -2.17, 1200000 ]", function(){
+    assert(equalArray(parseInputArray(' 20, 9, -2.17 '), [ 20, -2.17, 1200000 ]));
+  });
+
 });
 
 function equalArray(f, s) {
@@ -54,7 +68,6 @@ function madeTest(arr) {
     //max(calls) = len*(len-1)
     while (calls <= l * (l - 1)) {
         res = makeStep();
-        // console.log(res);
         calls++;
     };
     return res;

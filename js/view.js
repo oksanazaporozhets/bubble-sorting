@@ -9,10 +9,9 @@ document.getElementById('resetArray').addEventListener('click', function() {
 document.getElementById('loadArray').addEventListener('click', initializeSorting);
 
 function initializeSorting() {
-    document.getElementById('sortingResult').innerHTML = c;
+    document.getElementById('sortingResult').innerHTML = '';
     document.getElementById('stopMessage').innerHTML = '';
     var inputStr = document.getElementById('inputArray').value;
-    count = 0;
     if (isValidInput(inputStr)) {
         startArray = parseInputArray(inputStr);
         document.getElementById('nextStepBtn').style.display = 'block';
@@ -45,10 +44,9 @@ function showFinishMessage() {
 
 
 function highlightTwoElements(i, j, classAdded) {
-    console.log(i, j);
     var current1, current2;
-    current1 = '#a' + i;
-    current2 = '#a' + j;
-    $(current1).addClass(classAdded);
-    $(current2).addClass(classAdded);
+    current1 = 'a' + i;
+    current2 = 'a' + j;
+    document.getElementById(current1).className = classAdded;
+    document.getElementById(current2).className = classAdded;
 };

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,70 +13,69 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/2.0.0/chai.js"></script>
     <script>
         mocha.setup('bdd');
-    </script>
+    </script>  
+
     <script>
-        var assert = chai.assert;
+      var assert = chai.assert;
     </script>
 
     <title>Bubble sort visualization</title>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
     <link rel="stylesheet" href="css/style.css">
-</head>
 
-<body>
+  </head>
+
+  <body>
+
     <div class="container">
-        <div class="masthead">
-            <h3 class="text-muted">Пузырьковая сортировкa</h3>
+      <div class="masthead">
+        <h3 class="text-muted">Пузырьковая сортировкa</h3>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <br>
+
+            <form>
+              <div class="form-group">
+                <label for="inputArray">Исходный массив (числа через пробел или запятую)</label>
+                <input type="text" class="form-control" id="inputArray" placeholder="2, 99, 3.1415, 0, -73, 2.71">
+              </div>
+            
+              <button type="button" id="loadArray" class="btn btn-primary">Загрузить</button>
+              <button type="reset" id="resetArray" class="btn btn-warning">Cброс</button>
+            </form>
+
         </div>
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <br>
+      </div>
 
-                <form>
-                    <div class="form-group">
-                        <label for="inputArray">Исходный массив (числа через пробел или запятую)</label>
-                        <input type="text" class="form-control" id="inputArray" placeholder="2, 99, 3.1415, 0, -73, 2.71">
-                    </div>
-
-                    <button type="button" id="loadArray" class="btn btn-primary">Загрузить</button>
-                    <button type="reset" id="resetArray" class="btn btn-warning">Cброс</button>
-                </form>
-
-            </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div id="sortingResult"></div>
+            <button type="button" id="nextStepBtn" class="btn btn-success">Шаг вперед</button>
+            <p id="stopMessage"></p>
         </div>
+      </div>
 
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <div id="sortingResult"></div>
-                <button type="button" id="nextStepBtn" class="btn btn-success">Шаг вперед</button>
-                <p id="stopMessage"></p>
-            </div>
-        </div>
+	<script  src="js/main.js" ></script>
+    <script  src="js/view.js" ></script>
 
-        <script src="js/main.js"></script>
-        <script src="js/view.js"></script>
-        <script src="test/test.js"></script>
+    <script  src="test/test.js"></script>   
 
-
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="row"> 
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div id="mocha">
-                    <!-- в элементе с id="mocha" будут результаты тестов -->
+                  <!-- в элементе с id="mocha" будут результаты тестов -->
                 </div>
-
+              
                 <script>
                     mocha.run();
-                </script>
-            </div>
+                </script>         
         </div>
+      </div>
 
     </div>
-
-
-</body>
+  </body>
 
 </html>
