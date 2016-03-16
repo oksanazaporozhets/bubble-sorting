@@ -9,7 +9,7 @@ document.getElementById('resetArray').addEventListener('click', function() {
 document.getElementById('loadArray').addEventListener('click', initializeSorting);
 
 function initializeSorting() {
-    document.getElementById('sortingResult').innerHTML = c;
+    document.getElementById('sortingResult').innerHTML = '';
     document.getElementById('stopMessage').innerHTML = '';
     var inputStr = document.getElementById('inputArray').value;
     count = 0;
