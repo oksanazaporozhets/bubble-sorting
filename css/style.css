@@ -1,0 +1,33 @@
+#sortingResult{
+	margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+#sortingResult span{
+	padding: 10px;
+    border: 1px solid #aaa;
+    min-width: 50px;
+    display: inline-block;
+    text-align: center;
+    margin-right: 5px;
+}
+
+#stopMessage{
+	padding-top: 10px;
+}
+
+#nextStepBtn{
+	display: none;
+}
+
+.current{
+	background: #C0F0AE;
+}
+
+.swaped{
+	background: #E73C3C!important;
+}
+
+.blocked{
+	background: #ddd;
+}
